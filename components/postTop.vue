@@ -15,7 +15,8 @@
             postObj: Object,
             imgUrl: String,
             fluid: Boolean
-        },computed: {
+        },
+        computed: {
             postTitle() {
                 if (typeof this.postObj !== 'undefined') {
                     return this.postObj.title
@@ -59,7 +60,7 @@
       background-size: auto 100%;
     }
 
-    .msg{
+    .msg {
       padding: 2px 10px;
       border-radius: 4px;
       line-height: 12px;
@@ -71,7 +72,7 @@
       &-wrap {
         display: flex;
 
-        div{
+        div {
           margin: 5px 5px 5px 0;
         }
       }

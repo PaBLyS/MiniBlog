@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <div class="list-col">
-      <post-top :postObj="posts[0]" :imgUrl="imgUrl[0]" />
+      <post-top :postObj="posts[0]" :imgUrl="imgUrl[0]"/>
       <post-top :postObj="posts[1]" :imgUrl="imgUrl[1]"/>
     </div>
     <div class="list-col">
@@ -30,9 +30,7 @@
             this.$store.dispatch('fetchImg');
         },
         data() {
-            return {
-
-            }
+            return {}
         },
         computed: {
             posts() {
@@ -57,6 +55,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-     }
+    }
   }
 </style>

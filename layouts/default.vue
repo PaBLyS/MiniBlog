@@ -1,20 +1,20 @@
 <template>
   <div>
-    <custom-header />
-    <nuxt />
+    <custom-header/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
-  import customHeader from "../components/customHeader";
+    import customHeader from "../components/customHeader";
 
-  export default {
-      components: {customHeader}
-  }
+    export default {
+        components: {customHeader}
+    }
 </script>
 
 <style>
- body {
-   font-family: 'muli', sans-serif;
- }
+  body {
+    font-family: 'muli', sans-serif;
+  }
 </style>
