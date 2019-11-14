@@ -5,11 +5,19 @@
                      :postElem="elem"
                      :imgUrl="imgUrl[index]"/>
     <div class="pagination">
-      <div><<</div>
-      <div @click="list--"><</div>
-      <div>{{list}}</div>
-      <div @click="list++">></div>
-      <div>>></div>
+      <button @click="list = 1">
+        <img class="pagination_btn" src="rewind.png">
+      </button>
+      <button @click="list--">
+        <img class="pagination_btn-one" src="rewind-one.png">
+      </button>
+      <div class="pagination-list">{{list}}</div>
+      <button @click="list++">
+        <img class="pagination_btn-one" src="rewind-one-next.png">
+      </button>
+      <button @click="list = pagesAll">
+        <img class="pagination_btn" src="rewind-next.png">
+      </button>
     </div>
   </div>
 </template>
@@ -28,7 +36,8 @@
         },
         data() {
             return {
-                list: 1
+                list: 1,
+                pages: 1
             }
         },
         computed: {
@@ -43,6 +52,15 @@
                     let arr = [...this.posts];
                     return arr.splice((this.list - 1) * 10, 10);
                 }
+            },
+            pagesAll() {
+                return 10
+            }
+        },
+        watch: {
+            list: function (val) {
+                if (val < 1) this.list = 1;
+                if (val > this.pagesAll) this.list = this.pagesAll;
             }
         }
     }
@@ -57,5 +75,41 @@
 
   .pagination {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-list {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    button{
+      border-radius: 100%;
+      border: none;
+      background: none;
+      height: 30px;
+      width: 30px;
+      background: #2f89fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+
+      &:active, &:focus{
+        outline: none;
+      }
+
+      .pagination_btn {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+
+        &-one {
+          height: 65%;
+          width: 65%;
+        }
+      }
+    }
   }
 </style>

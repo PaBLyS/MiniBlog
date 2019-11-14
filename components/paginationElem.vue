@@ -35,14 +35,14 @@
         computed: {
             postTitle() {
                 if (typeof this.postElem !== 'undefined') {
-                    let temp = this.postElem.title
+                    let temp = this.postElem.title;
                     return temp.length > 30 ? temp.substr(0, 30) + '...' : temp
                 }
             },
             postBody() {
                 if (typeof this.postElem !== 'undefined') {
-                    let temp = this.postElem.body
-                    return temp.length > 180 ? temp.substr(0, 180) + '...' : temp
+                    let temp = this.postElem.body;
+                    return temp.length > 120 ? temp.substr(0, 120) + '...' : temp
                 }
             },
             postId() {
