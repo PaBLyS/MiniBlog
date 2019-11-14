@@ -86,4 +86,15 @@
       }
     }
   }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .card {
+      margin: 10px;
+    }
+  }
+  @media only screen and (max-width: 651px) {
+    .card {
+      margin: 10px;
+    }
+  }
 </style>

@@ -4,7 +4,7 @@
       <post-top :postObj="posts[0]" :imgUrl="imgUrl[0]"/>
       <post-top :postObj="posts[1]" :imgUrl="imgUrl[1]"/>
     </div>
-    <div class="list-col">
+    <div class="list-col clear">
       <post-top :postObj="posts[2]" :imgUrl="imgUrl[2]" fluid>
         <div class="msg msg-red">travel</div>
         <div class="msg msg-blue">food</div>
@@ -55,6 +55,33 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+  }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .list {
+
+      &-col {
+
+        &.clear {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 651px) {
+    .list {
+      display: block;
+      height: auto;
+
+      &-col {
+        margin-bottom: 30px;
+
+        &.clear {
+          display: none;
+        }
+      }
     }
   }
 </style>

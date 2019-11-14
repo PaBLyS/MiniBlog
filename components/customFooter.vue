@@ -17,10 +17,10 @@
           <li><a href="/">Subscribes</a></li>
         </ul>
         <ul class="link__wrap">
-          <li><a href="/">About Us</a></li>
-          <li><a href="/">Advertise</a></li>
-          <li><a href="/">Careers</a></li>
-          <li><a href="/">Subscribes</a></li>
+          <li><a href="/">Travel</a></li>
+          <li><a href="/">Lifestyle</a></li>
+          <li><a href="/">Sports</a></li>
+          <li><a href="/">Nature</a></li>
         </ul>
       </div>
       <div class="social">
@@ -161,7 +161,7 @@
   }
 
   .about-us {
-    width: 400px;
+    width: 30%;
 
     &__label {
       font-size: 16px;
@@ -222,8 +222,40 @@
         cursor: pointer;
         margin-right: 10px;
       }
-
     }
   }
 
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .container {
+      width: 630px;
+    }
+  }
+
+  @media only screen and (max-width: 651px) {
+    .wrap {
+      padding: 30px 0;
+    }
+
+    .container {
+      width: 350px;
+      display: block;
+    }
+
+    .about-us {
+      width: 100%;
+    }
+
+    .social {
+      width: 100%;
+      text-align: center;
+
+      &__link {
+        justify-content: space-between;
+      }
+    }
+
+    .link {
+      justify-content: space-between;
+    }
+  }
 </style>

@@ -130,4 +130,18 @@
       font-size: 16px;
     }
   }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .elem {
+      width: 48%;
+    }
+  }
+
+  @media only screen and (max-width: 651px) {
+    .elem {
+      width: 100%;
+      margin-bottom: 50px;
+      min-height: 100px;
+    }
+  }
 </style>

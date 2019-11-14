@@ -75,13 +75,13 @@
       background-color: #f8f9fa;
     }
 
-    & .wrap-1140 {
+    .wrap-1140 {
       max-width: 1140px;
       margin: 0 auto;
       padding: 80px 0;
     }
 
-    & .wrap-480 {
+    .wrap-480 {
       max-width: 480px;
       margin: 0 auto;
       padding: 80px 0;
@@ -136,6 +136,28 @@
           color: #f23a2e;
         }
       }
+    }
+  }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .section {
+      .wrap-1140 {
+        width: 630px;
+        padding: 30px 0;
+      }
+
+
+    }
+  }
+
+  @media only screen and (max-width: 651px) {
+    .section {
+      .wrap-1140 {
+        width: 350px;
+        padding: 30px 0;
+      }
+
+
     }
   }
 </style>

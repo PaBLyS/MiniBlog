@@ -9,7 +9,7 @@
         <post-bottom :postObj="posts[2]" :imgUrl="imgUrl[2]"/>
       </div>
     </div>
-    <div class="list__right">
+    <div class="list__right clear">
       <post-bottom :postObj="posts[3]" :imgUrl="imgUrl[3]" fluid/>
     </div>
   </div>
@@ -62,6 +62,45 @@
     &__right {
       min-height: 100%;
       width: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .list {
+      display: block;
+
+      .clear {
+        display: none;
+      }
+
+      &__left {
+        width: 100%;
+      }
+
+      &__right {
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and (max-width: 651px) {
+    .list {
+      display: block;
+
+      .clear {
+        display: none;
+      }
+
+      &__left {
+        width: 100%;
+
+        &-wrap {
+          display: block;
+        }
+      }
+
+      &__right {
+        width: 100%;
+      }
     }
   }
 </style>
