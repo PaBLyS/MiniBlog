@@ -11,16 +11,22 @@
         <pagination-list/>
       </div>
     </div>
+    <div class="section grey">
+      <div class="wrap-1140">
+        <post-bottom-list/>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
     import postTopList from "../components/postTopList";
     import paginationList from "../components/paginationList";
+    import postBottomList from "../components/postBottomList";
 
     export default {
         components: {
-            postTopList, paginationList
+            postTopList, paginationList, postBottomList
         }
     }
 </script>
