@@ -67,4 +67,24 @@
 
     }
   }
+
+  @media only screen and (min-width: 650px) and (max-width: 1141px) {
+    .section {
+      .wrap-1140 {
+        width: 630px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 651px) {
+    .section {
+      .wrap-1140 {
+        width: 350px;
+
+        .content {
+          width: 100%;
+        }
+      }
+    }
+  }
 </style>
